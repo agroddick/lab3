@@ -9,6 +9,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+	$("a.thumbnail").click(projectClick);
 	$("#testjs").click(function(e) {
 		$('.jumbotron h1').text("Javascript is connected");
 	});
