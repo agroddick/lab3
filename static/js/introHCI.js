@@ -12,6 +12,8 @@ function initializePage() {
 	$("a.thumbnail").click(projectClick);
 	$("#testjs").click(function(e) {
 		$('.jumbotron h1').text("Javascript is connected");
+		$("#testjs").text("Please wait...");
+		$(".jumbotron p").toggleClass("active");
 	});
 
 	// Add any additional listeners here
@@ -30,7 +32,7 @@ function projectClick(e) { 
 	if (description.length == 0) {
 		containingProject.append("<div class='project-description'><p>Description of the project.</p></div>");
 	} else {
-		description.html("<p>Stop clicking on me! You just dit it at " + (new Date()) + "</p>");
+		$(".project-description").fadeToggle();
 	}
 	
 }
